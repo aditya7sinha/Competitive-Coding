@@ -1,0 +1,30 @@
+//XORTWICE CODE FORCES SOLVED
+#include<bits/stdc++.h>
+using namespace std;
+void ret(int a,int b){
+	int sum=(a^0)+(b^0);
+	int p;
+	for(int i=1;i<=b;i++)
+	{
+		p=(a^i)+(b^i);
+		if(p<sum)
+			sum=p;
+
+	}
+	cout<<p<<endl;
+}
+int main(){
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int a,b;
+		cin>>a>>b;
+		if(a>b)
+			ret(a,b);
+		else
+			ret(b,a);
+	}
+	return 0;
+}
+
